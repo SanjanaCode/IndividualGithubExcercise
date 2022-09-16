@@ -28,7 +28,7 @@ public class SortArray {
     public static String[] sortString(String arr[]) {
 		for(int i=0;i<arr.length;i++) {
 			for(int j=0; j<arr.length-1-i;j++) {
-			if(arr[j].compareToIgnoreCase(arr[j+1])>0) {	//compares two strings lexicographically, irrespective of the case
+			if(arr[j].compareToIgnoreCase(arr[j+1])>0) {	//compares two strings based on unicode values, ignores upper case or lower case
 				String temp=arr[j];
 				arr[j]=arr[j+1];
 				arr[j+1]=temp;

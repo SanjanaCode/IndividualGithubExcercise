@@ -18,6 +18,8 @@ public class SortArrayTest {
 		int[] returned = obj.sortInt(unsorted);
 		assertArrayEquals(expected,returned);
 	}
+
+    //test for negative numbers
     @Test
 	void testIntArrayNegativeNumbers() {
 		int[] expected = {-9,-5,0,5,8,10};
@@ -26,6 +28,7 @@ public class SortArrayTest {
 		assertArrayEquals(expected,returned);
 	}
 	
+    //test for empty array
 	@Test
 	void testIntArrayEmpty() {
 		int[] expected = {};
@@ -34,6 +37,7 @@ public class SortArrayTest {
 		assertArrayEquals(expected,returned);
 	}
 	
+    //test for array containing odd number of elements
 	@Test
 	void testIntArrayOddLength() {
 		int[] expected = {3,6,8,9,12,15,18};
@@ -42,6 +46,7 @@ public class SortArrayTest {
 		assertArrayEquals(expected,returned);
 	}
 	
+    //test for array duplicates
 	@Test
 	void testIntArrayDuplicates() {
 		int[] expected = {5,7,9,9,9,15};

@@ -46,13 +46,31 @@ public class SortArrayTest {
 		assertArrayEquals(expected,returned);
 	}
 	
-    //test for array duplicates
+    //test to check if sorting happens correctly when there are duplicates
 	@Test
 	void testIntArrayDuplicates() {
 		int[] expected = {5,7,9,9,9,15};
 		int[] unsorted = {7,9,5,9,9,15};
 		int[] returned = obj.sortInt(unsorted);
 		assertArrayEquals(expected,returned);
+	}
+
+    //test for any effects that case might have on the sorting
+    @Test
+	void testStringArrayCase() {
+		String[] expected = {"August","December","juLy","June","MaY"};
+		String[] unsorted = {"MaY","August","juLy","June","December"};
+		String[] returned = obj.sortString(unsorted);
+		assertArrayEquals(expected,returned);	
+	}
+	
+    //test to check if sorting happens correctly when there are duplicates
+	@Test
+	void testStringArrayDuplicates() {
+		String[] expected = {"Catch","Fall","Fall","Jump","Run","Stand"};
+		String[] unsorted = {"Fall","Stand","Catch","Run","Jump","Fall"};
+		String[] returned = obj.sortString(unsorted);
+		assertArrayEquals(expected,returned);	
 	}
 }
 

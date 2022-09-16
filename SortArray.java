@@ -1,4 +1,4 @@
-package IndividualGithubExcercise;
+package IndividualGithubExercise;
 import java.util.Arrays;
 
 public class SortArray {
